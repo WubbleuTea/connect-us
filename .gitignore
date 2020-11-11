@@ -1,7 +1,3 @@
 node_modules/
-<<<<<<< HEAD
 config/default.json/
 .DS_Store
-=======
-config/default.json/
->>>>>>> b0630ccf8d41101e140f50b314b5408618f71149
