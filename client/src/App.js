@@ -12,15 +12,25 @@ import store from './store';
 import './App.css';
 
 const App = () => (
+  // Redux Provider
   <Provider store={store}>
+    {/* Lets us display different pages in our SPA */}
     <Router>
+      {/* Fragment lets us return multiple elements */}
       <Fragment>
+        {/* The Navbar from components,  This will always display */}
         <Navbar />
+        {/* Landing page route */}
         <Route exact path='/' component={Landing} />
+        {/* This section puts all of our other pages in a container */}
         <section className='container'>
+          {/* Our Alert for errors, client side */}
           <Alert />
+          {/* Switch lets us change what page is displayed */}
           <Switch>
+            {/* Register page route */}
             <Route exact path='/register' component={Register} />
+            {/* Login page route */}
             <Route exact path='/login' component={Login} />
           </Switch>
         </section>
