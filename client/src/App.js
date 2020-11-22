@@ -14,7 +14,7 @@ import './App.css';
 const App = () => (
   // Redux Provider
   <Provider store={store}>
-    {/* Lets us display different pages in our SPA */}
+    {/* Displays different pages in our SPA */}
     <Router>
       {/* Fragment lets us return multiple elements */}
       <Fragment>
