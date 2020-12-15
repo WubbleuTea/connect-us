@@ -2,7 +2,8 @@ import {
   GET_POSTS,
   POST_ERROR,
   UPDATE_LIKES,
-  DELETE_POST
+  DELETE_POST,
+  ADD_POST
 } from '../actions/types';
 
 const initialState = {
@@ -20,6 +21,13 @@ export default function postSwitch(state = initialState, action) {
       return {
         ...state,
         posts: payload,
+        loading: false
+      };
+    case ADD_POST:
+      return {
+        ...state,
+        // takes the original state posts and adds the pnew post(payload) to the array
+        posts: [payload, ...state.posts],
         loading: false
       };
     case DELETE_POST:
